@@ -43,7 +43,7 @@ use_os_path_sep = true
 disabled = false
 
 [git_branch]
-format = "[$symbol$branch($remote_name:$remote_branch)]($style) "
+format = '[$symbol$branch\($remote_name:$remote_branch\)]($style) '
 symbol = ""
 style = "bold purple"
 always_show_remote = true
