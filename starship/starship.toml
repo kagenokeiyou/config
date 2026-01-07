@@ -1,14 +1,21 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = """$directory\
+format = """$username\
+$directory\
 $git_branch\
 $git_commit\
 $python\
 $conda\
 $cmd_duration
-$sudo\
 $character"""
 add_newline = true
+
+[username]
+format = "[$user]($style) "
+style_root = "bold red"
+style_user = "bold green"
+show_always = true
+disabled = false
 
 [character]
 format = "$symbol "
@@ -18,13 +25,6 @@ vimcmd_symbol = "[🤓👆](yellow)"
 vimcmd_replace_one_symbol = "[✏️👆](purple)"
 vimcmd_replace_symbol = "[✏️👆](purple)"
 vimcmd_visual_symbol = "[👀👆](yellow)"
-disabled = false
-
-[sudo]
-format = "[$symbol]($style)"
-symbol = "⚡"
-style = "yellow"
-allow_windows = true
 disabled = false
 
 [directory]
